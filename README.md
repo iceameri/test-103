@@ -63,5 +63,10 @@ $ yarn run test:cov
    $ nest g mo user
    $ nest g co user
    $ nest g s user
+*nest g resource
 3. typeORM installation
    $ yarn add --save @nestjs/typeorm typeorm pg
+
+4. mongodb 연결하기
+   $ npm i @nestjs/mongoose mongoose
+
