@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo
+    container_name: test-mongodb
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data/db/mongo:/var/lib/db/mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 1234
+      MONGO_INITDB_DATABASE: mongo
+
+  postgresql:
+    image: postgres
+    restart: always
+    container_name: test-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: postgres
+    # 볼륨 설정
+    volumes:
+      - ./data/db/postgres/:/var/lib/db/postgresql
