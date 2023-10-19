@@ -57,12 +57,15 @@ $ yarn run test
    $ nest g mo user
    $ nest g co user
    $ nest g s user
+*nest g resource
 3. typeORM installation
    $ yarn add --save @nestjs/typeorm typeorm pg
 
    npm i npm start
+4. mongodb 연결하기
+   $ npm i @nestjs/mongoose mongoose
 
-4. npm install nodemon --save-dev $ npm run server 명령어로 실행
+5. npm install nodemon --save-dev $ npm run server 명령어로 실행
 
 최근 nestjs에 관심이 생겨 일단 crud 기본 포맷만 만들어보자는 생각에 프로젝트를 시작해보았다. 제목은 간단하지만 typeorm 버전이 3으로 업데이트 되면서 @entityrepository가 deprecated됨에 따라 엄청난 난관이였다.
 
