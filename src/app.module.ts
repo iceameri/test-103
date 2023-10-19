@@ -5,6 +5,7 @@ import { UserModule } from './module/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { postgresConfig } from './config/typeorm.config';
 import { MongooseModule } from '@nestjs/mongoose';
+import { CatService } from './cat/cat.service';
 
 @Module({
   imports: [
@@ -13,6 +14,6 @@ import { MongooseModule } from '@nestjs/mongoose';
     MongooseModule.forRoot('mongodb://localhost/nest'),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, CatService],
 })
 export class AppModule {}
